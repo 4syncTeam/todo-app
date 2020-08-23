@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/widgets/list_tile.dart';
 
 class ListContainer extends StatelessWidget {
   @override
@@ -6,7 +7,7 @@ class ListContainer extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 15.0, right: 15.0),
       child: Container(
-        width: 200.0,
+        width: 230.0,
         decoration: BoxDecoration(
           color: Colors.red,
           borderRadius: BorderRadius.all(
@@ -14,7 +15,7 @@ class ListContainer extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(14.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -33,6 +34,9 @@ class ListContainer extends StatelessWidget {
                   fontSize: 15.0,
                 ),
               ),
+              TaskListTile(),
+              TaskListTile(),
+              TaskListTile(),
             ],
           ),
         ),

@@ -22,16 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.blue,
-                ),
-                child: CircleAvatar(
-                  child: Image(
-                    image: AssetImage("assets/images/Ali.jpg"),
-                  ),
-                ),
+              CircleAvatar(
+                radius: 25,
+                backgroundImage: AssetImage("assets/images/Ali.jpg"),
               ),
               FlatButton(
                 onPressed: () => {},
@@ -73,7 +66,6 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(height: 35.0),
           Container(
             height: 320,
-            color: Colors.blue,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (BuildContext context, int index) {
