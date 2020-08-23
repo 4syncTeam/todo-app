@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'custom_bottom_app_bar.dart';
+
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
 
@@ -22,6 +24,11 @@ class _HomeScreenState extends State<HomeScreen> {
       )),
       body: Column(
         children: <Widget>[],
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.transparent,
+        elevation: 0,
+        child: CustomBottomAppBar(),
       ),
     );
   }
