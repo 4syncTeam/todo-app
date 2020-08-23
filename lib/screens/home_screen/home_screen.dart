@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/screens/home_screen/body.dart';
 
@@ -15,6 +16,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    // print(FirebaseFirestore.instance.collection('todos').snapshots().first);
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
