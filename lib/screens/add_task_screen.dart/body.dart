@@ -45,8 +45,15 @@ class AddTaskBody extends StatelessWidget {
             height: 450,
             width: 350,
             decoration: BoxDecoration(
-              color: Colors.red,
+              color: Colors.white,
               borderRadius: BorderRadius.circular(18.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black54,
+                  blurRadius: 10.0,
+                  offset: Offset(0.0, 1.5),
+                ),
+              ],
             ),
           ),
         ),
