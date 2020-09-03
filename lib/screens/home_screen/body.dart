@@ -4,7 +4,14 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text('works'),
+      child: Center(
+        child: FlatButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/add');
+          },
+          child: Text('Add task'),
+        ),
+      ),
     );
   }
 }
