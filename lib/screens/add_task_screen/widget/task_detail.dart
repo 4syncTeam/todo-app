@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:intl/intl.dart';
 
+import '../../../constant/colors.dart';
+
 class TaskDetail extends StatefulWidget {
   @override
   _TaskDetailState createState() => _TaskDetailState();
@@ -97,7 +99,7 @@ class _TaskDetailState extends State<TaskDetail> {
             Container(
               width: 180,
               child: RaisedButton(
-                color: Colors.indigoAccent[700],
+                color: kPrimaryColor,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0)),
                 onPressed: () => {},

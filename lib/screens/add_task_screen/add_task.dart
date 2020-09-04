@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../constant/colors.dart';
 import 'body.dart';
 
 class AddTask extends StatelessWidget {
@@ -7,7 +8,7 @@ class AddTask extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.indigoAccent[700],
+        backgroundColor: kPrimaryColor,
         elevation: 0.0,
         actions: <Widget>[
           FlatButton(

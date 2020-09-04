@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../constant/colors.dart';
 import './widget/task_detail.dart';
 
 class AddTaskBody extends StatelessWidget {
@@ -14,7 +15,7 @@ class AddTaskBody extends StatelessWidget {
               width: double.infinity,
               height: 140,
               decoration: BoxDecoration(
-                color: Colors.indigoAccent[700],
+                color: kPrimaryColor,
               ),
               child: Padding(
                 padding: const EdgeInsets.only(left: 40, right: 40, bottom: 65),
