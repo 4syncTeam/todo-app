@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:todoapp/constant/routes.dart';
 
 import './screens/add_task_screen/add_task.dart';
 import './screens/home_screen/home_screen.dart';
@@ -16,9 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Todo App',
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
-      routes: {
-        '/add': (context) => AddTask(),
-      },
+      routes: routes,
     );
   }
 }
