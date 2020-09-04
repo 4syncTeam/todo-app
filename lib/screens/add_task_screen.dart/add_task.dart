@@ -10,14 +10,12 @@ class AddTask extends StatelessWidget {
         backgroundColor: Colors.indigoAccent[700],
         elevation: 0.0,
         actions: <Widget>[
-          Padding(
+          FlatButton(
             padding: EdgeInsets.zero,
-            child: FlatButton(
-              onPressed: () => {},
-              child: Icon(
-                Icons.close,
-                color: Colors.white,
-              ),
+            onPressed: () => {},
+            child: Icon(
+              Icons.close,
+              color: Colors.white,
             ),
           ),
         ],

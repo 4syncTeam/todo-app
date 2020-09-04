@@ -1,6 +1,17 @@
 import 'package:flutter/material.dart';
 
-class TaskDetail extends StatelessWidget {
+import 'package:intl/intl.dart';
+
+class TaskDetail extends StatefulWidget {
+  @override
+  _TaskDetailState createState() => _TaskDetailState();
+}
+
+class _TaskDetailState extends State<TaskDetail> {
+  DateTime _selectedDate;
+  TimeOfDay _selectedTime;
+  DateFormat _dateFormat = DateFormat("yyyy-MM-dd");
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,10 +49,18 @@ class TaskDetail extends StatelessWidget {
                           context: context,
                           initialDate: DateTime.now(),
                           firstDate: DateTime(2019),
-                          lastDate: DateTime(2020),
+                          lastDate: DateTime(2022),
+                        ).then(
+                          (value) {
+                            setState(() {
+                              _selectedDate = value;
+                            });
+                          },
                         );
                       },
-                      child: Text('Pick a Date'),
+                      child: _selectedDate == null
+                          ? Text('Pick a Date')
+                          : Text(_dateFormat.format(_selectedDate)),
                     ),
                   ],
                 ),
@@ -51,14 +70,22 @@ class TaskDetail extends StatelessWidget {
                     Text('Time'),
                     RaisedButton(
                       onPressed: () {
-                        showDatePicker(
+                        showTimePicker(
                           context: context,
-                          initialDate: DateTime.now(),
-                          firstDate: DateTime(2019),
-                          lastDate: DateTime(2020),
+                          initialTime: TimeOfDay.now(),
+                        ).then(
+                          (value) {
+                            setState(() {
+                              _selectedTime = value;
+                            });
+                          },
                         );
                       },
-                      child: Text('Set a Time'),
+                      child: _selectedTime == null
+                          ? Text('Set a Time')
+                          : Text(_selectedTime.hour.toString() +
+                              " : " +
+                              _selectedTime.minute.toString()),
                     ),
                   ],
                 ),
