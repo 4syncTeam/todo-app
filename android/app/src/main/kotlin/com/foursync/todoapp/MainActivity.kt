@@ -1,4 +1,4 @@
-package com.foursync.todoapp.todoapp
+package com.foursync.todoapp
 
 import io.flutter.embedding.android.FlutterActivity
 

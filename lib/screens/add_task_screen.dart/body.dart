@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/screens/add_task_screen.dart/widget/task_detail.dart';
+import './widget/task_detail.dart';
 
 class AddTaskBody extends StatelessWidget {
   @override
