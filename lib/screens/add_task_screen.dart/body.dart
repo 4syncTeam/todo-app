@@ -43,8 +43,9 @@ class AddTaskBody extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 90),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 90),
+              alignment: Alignment.topCenter,
               child: TaskDetail(),
             ),
           ],
