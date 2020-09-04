@@ -30,31 +30,34 @@ class _TaskDetailState extends State<TaskDetail> {
         ],
       ),
       child: Container(
-        padding: const EdgeInsets.all(25.0),
-        child: Column(
-          children: <Widget>[
-            entrySection('Title', 'Enter task title'),
-            SizedBox(height: 25),
-            entrySection('Descrption', 'Enter task description'),
-            SizedBox(height: 25),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                pickDateSection(context),
-                pickTimeSection(context),
-              ],
-            ),
-            SizedBox(height: 20),
-            entrySection('Tag', 'Select a tag for your task'),
-            SizedBox(height: 25),
-            addTaskBtn(),
-          ],
+        // padding: const EdgeInsets.all(25.0),
+        padding: EdgeInsets.fromLTRB(25, 25, 25, 10),
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              entrySection('Title', 'Enter task title', false),
+              SizedBox(height: 25),
+              entrySection('Descrption', 'Enter task description', true),
+              SizedBox(height: 25),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  pickDateSection(context),
+                  pickTimeSection(context),
+                ],
+              ),
+              SizedBox(height: 20),
+              entrySection('Tag', 'Select a tag for your task', false),
+              SizedBox(height: 25),
+              addTaskBtn(),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  Widget entrySection(String text, String hintText) {
+  Widget entrySection(String text, String hintText, bool isMultiLine) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -65,6 +68,8 @@ class _TaskDetailState extends State<TaskDetail> {
           ),
         ),
         TextField(
+          maxLines: isMultiLine ? null : 1,
+          keyboardType: isMultiLine ? TextInputType.multiline : null,
           decoration: InputDecoration(
             hintText: hintText,
           ),
@@ -105,7 +110,7 @@ class _TaskDetailState extends State<TaskDetail> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Text('Time'),
+        Text('Time (optional)'),
         RaisedButton(
           onPressed: () {
             showTimePicker(
