@@ -12,6 +12,7 @@ class HomeBody extends StatelessWidget {
         children: [
           buildFlatButton(context, 'Add task', ADD_TASK_ROUTE),
           buildFlatButton(context, 'Auth', AUTH_ROUTE),
+          buildFlatButton(context, 'Report', REPORT_ROUTE),
         ],
       ),
     );
