@@ -13,34 +13,11 @@ class TodoModel {
 }
 
 final List<TodoModel> DUMMY_LIST = [
-  TodoModel(
-    title: 'title 1',
-    description: 'description 1',
-    dateTime: new DateTime.now(),
-    tags: [],
-  ),
-  TodoModel(
-    title: 'title 2',
-    description: 'description 2',
-    dateTime: new DateTime.now(),
-    tags: [],
-  ),
-  TodoModel(
-    title: 'title 3',
-    description: 'description 3',
-    dateTime: new DateTime.now(),
-    tags: [],
-  ),
-  TodoModel(
-    title: 'title 4',
-    description: 'description 4',
-    dateTime: new DateTime.now(),
-    tags: [],
-  ),
-  TodoModel(
-    title: 'title 5',
-    description: 'description 5',
-    dateTime: new DateTime.now(),
-    tags: [],
-  ),
+  for (var i = 0; i < 20; i++)
+    TodoModel(
+      title: 'title $i',
+      description: 'description $i',
+      dateTime: new DateTime.now(),
+      tags: [],
+    )
 ];
